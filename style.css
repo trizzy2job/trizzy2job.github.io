@@ -44,3 +44,84 @@ footer { border-top: 1px solid #ddd; padding-top: 12px; color: #555; }
   font-size: 0.9rem;
   font-style: normal;
 }
+/* Automatically use dark colors when the visitor prefers dark mode. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+  }
+
+  html, body {
+    background-color: #17191c;
+  }
+
+  body {
+    color: #e9eaec;
+  }
+
+  a {
+    color: #93c7ff;
+  }
+
+  a:hover {
+    color: #badcff;
+  }
+
+  nav a {
+    color: inherit;
+  }
+
+  footer {
+    border-top-color: #41454a;
+    color: #b2b6bc;
+  }
+
+  .about-quote cite {
+    color: #aab0b8;
+  }
+
+  /* The CV page declares some colors in its own <style> block.
+     These overrides therefore use !important where necessary. */
+  .cv-contact,
+  .cv-date,
+  .cv-subtitle,
+  .timeline-intro,
+  .timeline-caption,
+  .job small,
+  .timeline-years,
+  .timeline-detail .detail-dates {
+    color: #afb5bc !important;
+  }
+
+  .timeline-axis {
+    border-bottom-color: #555b62 !important;
+  }
+
+  .timeline-row {
+    border-bottom-color: #353a40 !important;
+  }
+
+  .track {
+    background-image: linear-gradient(to right, #353a40 1px, transparent 1px) !important;
+    border-right-color: #353a40 !important;
+  }
+
+  .interval {
+    --ink: #93c7ff !important;
+  }
+
+  .interval:hover,
+  .interval:focus-visible {
+    --ink: #c0e1ff !important;
+  }
+
+  .interval:focus-visible {
+    outline-color: #c0e1ff !important;
+  }
+
+  .timeline-detail {
+    background-color: #25292e !important;
+    color: #e9eaec !important;
+    border-color: #555b62 !important;
+    box-shadow: 0 7px 24px #0008 !important;
+  }
+}
