@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Programs | Tristen Gann</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Page-specific layout; the rest of the site uses style.css. */
+    .programs { margin-top: 2rem; }
+    .program {
+      display: grid;
+      grid-template-columns: minmax(0, 340px) minmax(0, 1fr);
+      gap: 1.5rem;
+      align-items: start;
+      margin: 0 0 2.5rem;
+    }
+    .program-preview { margin: 0; }
+    .program-preview img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 16;
+      object-fit: cover;
+      background: #f5f5f5;
+      border: 1px solid #ddd;
+    }
+    .program-info h2 { margin: 0 0 .4rem; }
+    .program-info p { margin: 0 0 .8rem; }
+    .program-links { display: flex; flex-wrap: wrap; gap: .5rem 1.2rem; }
+    @media (max-width: 650px) {
+      .program { grid-template-columns: 1fr; gap: .8rem; }
+      .program-preview { max-width: 480px; }
+    }
+  </style>
+</head>
+<body>
+  <site-nav></site-nav>
+
+  <main>
+    <h1>Computer Programs</h1>
+    <p>Software, computational experiments, and other projects.</p>
+
+    <div class="programs">
+      <!-- Duplicate this article block to add another program. -->
+      <article class="program">
+        <figure class="program-preview">
+          <!-- Replace with a .gif, .png, .jpg, or .webp in assets/programs/. -->
+          <img src="assets/programs/Fractal Thumbnail.gif" alt="Preview of Fractal Explorer" loading="lazy">
+        </figure>
+        <div class="program-info">
+          <h2>Fractal Explorer</h2>
+          <p>Interactive desktop explorer for finite-stage self-affine constructions in complex dimensions. 
+            It accepts an arbitrary complex matrix and an alphabet of complex vectors then generates the fractal.
+            You can look around at the fractal from different directions or different dimensions. 
+          </p>
+          <p>If you already have python on a Windows computer, just download, unzip, and run the .bat. For Mac, you can run the bash in the readme.
+          </p>
+          <p class="program-links">
+            <a href="assets/programs/complex_cantor_explorer.zip" download>Download program</a>
+            <a href="https://github.com/trizzy2job/Fractal-Explorer" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+          </p>
+        </div>
+      </article>
+
+      <article class="program">
+        <figure class="program-preview">
+          <img src="assets/programs/fup_pairs.png" alt="Preview of FUP Explorer" loading="lazy">
+        </figure>
+        <div class="program-info">
+          <h2>FUP Interactive Explorer</h2>
+          <p>An interactive Python application for numerically investigating FUP exponents
+            associated with finite-stage, higher-dimensional Cantor digit sets. 
+            It computes operator norms of restricted discrete Fourier transforms, compares the resulting finite-stage exponents with the Hilbert–Schmidt norm, and plots results for isotropic and anisotropic diagonal dilations.</p>
+          <p class="program-links">
+            <a href="/assets/Programs/FUP_explorer.7z" download>Download program</a>
+            <a href="https://github.com/trizzy2job/FUP-Explorer" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+          </p>
+        </div>
+      </article>
+
+      <article class="program">
+        <figure class="program-preview">
+          <img src="assets/programs/cantorfractal.gif" alt="Preview of Fractal Generator" loading="lazy">
+        </figure>
+        <div class="program-info">
+          <h2>Cantor-Fractals</h2>
+          <p>
+            A javascript website for constructing self-affine rectangle fractals in the browser. 
+            This is an earlier version of the above Fractal Explorer with a more intuitive ui.
+            It can make gifs of stages developing in 2D and 3D. To use just download and open index.html.
+          </p>
+          <p class="program-links">
+            <a href="/assets/Programs/Cantor-Fractals-main.zip" download>Download program</a>
+            <a href="https://github.com/tristenlol/Cantor-Fractals" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+          </p>
+        </div>
+      </article>
+
+      <article class="program">
+        <figure class="program-preview">
+          <img src="assets/programs/SRS.jpeg" alt="Preview of Fractal Generator" loading="lazy">
+        </figure>
+        <div class="program-info">
+          <h2>Silk Road Swag</h2>
+          <p>
+           This was a proof of concept for a decentralized fashion company which would sell real T-shirts using cryptocurrency, be owned by customers, and have a connected 3D browser universe.
+            I made the backend server before LLMs, half of the front-end pages, and many assets.
+          </p>
+          <p class="program-links">
+            <a href="https://github.com/carlson3912/communex" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+          </p>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <script src="site-nav.js" defer></script>
+
+</body>
+</html>

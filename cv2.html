@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CV | Tristen Johnny Gann</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Page-only styling; no framework or external dependencies. */
+    body { max-width: 1120px; }
+    .cv { margin: 2rem auto 5rem; line-height: 1.55; }
+    .cv h1 { margin: 0 0 .2rem; font-size: 2rem; letter-spacing: -.03em; }
+    .cv-contact { font-size: .93rem; color: #555; margin: 0 0 .35rem; }
+    .cv-document { margin: 0 0 2rem; font-size: .93rem; }
+    .cv h2 { margin: 2.3rem 0 .8rem; font-size: 1.02rem; letter-spacing: .07em; text-transform: uppercase; }
+    .cv-entry { max-width: 870px; margin: 0 0 1rem; }
+    .cv-entry-heading { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; }
+    .cv-entry h3 { font-size: 1.02rem; margin: 0; }
+    .cv-date, .cv-subtitle { color: #555; }
+    .cv-date { white-space: nowrap; font-size: .91rem; }
+    .cv-subtitle { font-style: italic; margin: 0; }
+    .cv-entry p { margin: .2rem 0 0; }
+
+    .timeline-intro { max-width: 790px; margin: 0 0 .85rem; color: #555; font-size: .92rem; }
+    .timeline-scroll { overflow-x: auto; padding: .25rem 0 1rem; }
+    .timeline { min-width: 880px; }
+    .timeline-axis, .timeline-row { display: grid; grid-template-columns: 258px minmax(0,1fr); }
+    .timeline-years { display: grid; grid-template-columns: repeat(7,1fr); padding-bottom: .5rem; font-size: .9rem; color: #505050; }
+    .timeline-years span { text-align: center; }
+    .timeline-axis { border-bottom: 1px solid #bfc4c9; }
+    .timeline-axis-label { font-weight: 600; font-size: .9rem; }
+    .timeline-row { border-bottom: 1px solid #e5e6e8; }
+    .job { padding: .8rem 1rem .8rem 0; display: flex; flex-direction: column; justify-content: center; line-height: 1.3; }
+    .job strong { font-size: .92rem; font-weight: 650; }
+    .job small { font-size: .77rem; color: #666; margin-top: .22rem; }
+    .track { position: relative; min-height: 60px;
+      background-image: linear-gradient(to right, #e4e7e9 1px, transparent 1px);
+      background-size: calc(100% / 7) 100%; border-right: 1px solid #e4e7e9; }
+    .interval { --ink: #365f7b; position: absolute; top: 19px; height: 22px; min-width: 14px;
+      padding: 0; background: transparent; border: 0; cursor: pointer; color: var(--ink);
+      border-radius: 0; }
+    .interval::before, .interval::after { content: ""; position: absolute; top: 0; bottom: 0;
+      width: 6px; border-top: 2px solid currentColor; border-bottom: 2px solid currentColor; }
+    .interval::before { left: 0; border-left: 2px solid currentColor; }
+    .interval::after { right: 0; border-right: 2px solid currentColor; }
+    .interval.ongoing::after { content: ")"; border: 0; top: -2px; bottom: auto; right: -2px; width: auto; font: 25px/22px Georgia, serif; }
+    .interval { background-image: linear-gradient(currentColor,currentColor);
+      background-position: center center; background-repeat: no-repeat; background-size: 100% 2px; }
+    .interval:hover, .interval:focus-visible { --ink: #17435f; z-index: 2; }
+    .interval:focus-visible { outline: 2px solid #17435f; outline-offset: 4px; }
+    .timeline-caption { font-size: .84rem; color: #666; margin: .25rem 0 .8rem; max-width: 900px; }
+    .timeline-detail { position: fixed; left: 0; top: 0; width: min(330px,calc(100vw - 24px));
+      box-sizing: border-box; padding: .8rem .95rem; background: white; border: 1px solid #b8c0c6;
+      border-radius: 4px; box-shadow: 0 7px 24px #0002; z-index: 2000;
+      pointer-events: none; line-height: 1.4; }
+    .timeline-detail[hidden] { display: none; }
+    .timeline-detail strong { display: block; font-size: .92rem; }
+    .timeline-detail .detail-dates { color: #555; font-size: .84rem; margin: .3rem 0; }
+    .timeline-detail p:last-child { margin: 0; font-size: .9rem; }
+    .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden;
+      clip: rect(0,0,0,0); white-space: nowrap; }
+    .print-experience { display: none; }
+    @media(max-width:600px) {
+      .cv-entry-heading { display: block; }
+      .cv-date { display: block; }
+      .timeline-intro { font-size: .9rem; }
+    }
+    @media print {
+      body { max-width: none; padding: 0; font-size: 10pt; }
+      site-nav, .timeline-scroll, .timeline-caption, .timeline-intro, .cv-document { display: none !important; }
+      .cv { margin: 0; }
+      .cv h2 { margin-top: 1.3rem; }
+      .print-experience { display: block; }
+      .cv-entry { break-inside: avoid; }
+    }
+  </style>
+  <script src="site-nav.js" defer></script>
+</head>
+<body>
+  <site-nav></site-nav>
+  <main class="cv">
+    <h1>Tristen Johnny Gann</h1>
+    <p class="cv-document"><a href="assets/Gann_CV.pdf" target="_blank" rel="noopener">CV (PDF)</a></p>
+
+    <section aria-labelledby="education">
+      <h2 id="education">Education</h2>
+      <article class="cv-entry">
+        <div class="cv-entry-heading"><h3>San Francisco State University</h3><span class="cv-date">2020–2026</span></div>
+        <p class="cv-subtitle">Bachelor of Arts and Master’s in Mathematics</p>
+        <p><strong>Coursework:</strong> Calculus, Linear Algebra, PDEs, Algebra, Real Analysis, Complex Analysis, Algebraic Geometry, Algebraic Topology, Topological Data Analysis, Geometry, Measure Theory, Mathematics for Teaching, Physics, Quantum Physics, Philosophy.</p>
+        <p><strong>Thesis under Dr. Chun-Kit Lai:</strong> Fractal Uncertainty Principles of Subcritical Density for High Dimensions.</p>
+      </article>
+      <article class="cv-entry">
+        <div class="cv-entry-heading"><h3>University of California, Berkeley</h3><span class="cv-date">2025–2026</span></div>
+        <p class="cv-subtitle">Graduate cross-enrollment</p>
+        <p><strong>Coursework:</strong> Harmonic Analysis, Operator Theory.</p>
+      </article>
+      <article class="cv-entry">
+        <div class="cv-entry-heading"><h3>University of Birmingham, England</h3><span class="cv-date">2023–2024</span></div>
+        <p class="cv-subtitle">Year of study abroad</p>
+        <p><strong>Coursework:</strong> Group Theory, Number Theory, Graph Theory, Differential Equations, Topology, Probability and Statistics.</p>
+      </article>
+    </section>
+
+    <section aria-labelledby="experience">
+      <h2 id="experience">Work Experience</h2>
+      <div class="timeline-scroll" tabindex="0" aria-label="Employment timeline">
+        <div class="timeline" role="list" aria-label="Work experience by year">
+          <div class="timeline-axis" aria-hidden="true"><div class="timeline-axis-label">Position</div><div class="timeline-years">
+            <span>2020</span><span>2021</span><span>2022</span><span>2023</span><span>2024</span><span>2025</span><span>2026</span>
+          </div></div>
+          <div class="timeline-row" role="listitem">
+      <div class="job"><strong>IT Service Desk Intern</strong><small>California Public Utilities Commission</small></div>
+      <div class="track"><button class="interval" type="button" style="left:10.7143%;width:28.5714%" data-title="IT Service Desk Intern · California Public Utilities Commission" data-dates="October 2020 – September 2022" data-detail="Windows diagnostics and IT ticket resolution; supported more than 1,000 employees; maintained government software systems and hardware inventory." aria-label="IT Service Desk Intern · California Public Utilities Commission. October 2020 – September 2022. Windows diagnostics and IT ticket resolution; supported more than 1,000 employees; maintained government software systems and hardware inventory."><span class="visually-hidden">Oct 2020–Sep 2022</span></button></div>
+    </div>
+          <div class="timeline-row" role="listitem">
+      <div class="job"><strong>Line Cook</strong><small>Marugame Udon</small></div>
+      <div class="track"><button class="interval" type="button" style="left:20.2381%;width:4.7619%" data-title="Line Cook · Marugame Udon" data-dates="June – September 2021" data-detail="Worked as a line cook at Marugame Udon." aria-label="Line Cook at Marugame Udon. June through September 2021. Worked as a line cook."><span class="visually-hidden">Jun–Sep 2021</span></button></div>
+    </div>
+          <div class="timeline-row" role="listitem">
+      <div class="job"><strong>Computer Technician</strong><small>Elevate Technologies</small></div>
+      <div class="track"><button class="interval" type="button" style="left:39.2857%;width:13.0952%" data-title="Computer Technician · Elevate Technology" data-dates="October 2022 – August 2023 (first period)" data-detail="Installed office computers at Bay Area companies, including Intuit, BlackRock, and Chan Zuckerberg Foundation." aria-label="Computer Technician · Elevate Technology. October 2022 – August 2023 (first period). Installed office computers at Bay Area companies, including Intuit, BlackRock, and Nvidia."><span class="visually-hidden">Oct 2022–Aug 2023</span></button><button class="interval ongoing" type="button" style="left:77.3810%;width:22.6190%" data-title="Computer Technician · Elevate Technology" data-dates="June 2025 – current" data-detail="Second employment period at Elevate Technology. Installing computers at offices of Bay Area companies, including Intuit, Nvidia, and BlackRock." aria-label="Computer Technician · Elevate Technology. June 2025 – current, second period. Installing computers at Bay Area offices."><span class="visually-hidden">Jun 2025–Dec 2026</span></button></div>
+    </div>
+          <div class="timeline-row" role="listitem">
+      <div class="job"><strong>Delivery Driver</strong><small>DoorDash</small></div>
+      <div class="track"><button class="interval" type="button" style="left:39.2857%;width:13.0952%" data-title="Delivery Driver · DoorDash" data-dates="October 2022 – August 2023" data-detail="Worked as a delivery driver for DoorDash." aria-label="Delivery Driver at DoorDash. October 2022 through August 2023."><span class="visually-hidden">Oct 2022–Aug 2023</span></button></div>
+    </div>
+          <div class="timeline-row" role="listitem">
+      <div class="job"><strong>Robotics Instructor</strong><small>EASE Education / Happy Kids Robotics</small></div>
+      <div class="track"><button class="interval" type="button" style="left:39.2857%;width:3.5714%" data-title="Robotics Instructor · EASE Education / Happy Kids Robotics" data-dates="October – December 2022" data-detail="Led hands-on robotics activities for elementary school students." aria-label="Robotics Instructor · EASE Education / Happy Kids Robotics. October – December 2022. Led hands-on robotics activities for elementary school students."><span class="visually-hidden">Oct–Dec 2022</span></button><button class="interval" type="button" style="left:63.0952%;width:1.1905%" data-title="Robotics Instructor · EASE Education / Happy Kids Robotics" data-dates="June 2024" data-detail="Taught robotics concepts through hands-on activities with elementary school students." aria-label="Robotics Instructor · EASE Education / Happy Kids Robotics. June 2024. Taught robotics concepts through hands-on activities with elementary school students."><span class="visually-hidden">Jun 2024</span></button></div>
+    </div>
+          <div class="timeline-row" role="listitem">
+      <div class="job"><strong>Manual Laborer</strong><small>Russel Construction</small></div>
+      <div class="track"><button class="interval" type="button" style="left:64.2857%;width:2.3810%" data-title="Manual Laborer · Russel Construction" data-dates="July – August 2024" data-detail="Worked as a manual laborer at Russel Construction." aria-label="Manual Laborer at Russel Construction. July through August 2024."><span class="visually-hidden">Jul–Aug 2024</span></button></div>
+    </div>
+          <div class="timeline-row" role="listitem">
+      <div class="job"><strong>Afterschool STEM Instructor</strong><small>CamEDU</small></div>
+      <div class="track"><button class="interval" type="button" style="left:71.4286%;width:4.7619%" data-title="Afterschool STEM Instructor · CamEDU" data-dates="January – April 2025" data-detail="Taught mathematics and science to elementary and middle school students in Daly City and South San Francisco." aria-label="Afterschool STEM Instructor · CamEDU. January – April 2025. Taught mathematics and science to elementary and middle school students in Daly City and South San Francisco."><span class="visually-hidden">Jan–Apr 2025</span></button></div>
+    </div>
+          <div class="timeline-row" role="listitem">
+      <div class="job"><strong>Graduate Teaching Associate</strong><small>San Francisco State University</small></div>
+      <div class="track"><button class="interval ongoing" type="button" style="left:79.7619%;width:20.2381%" data-title="Graduate Teaching Associate · San Francisco State University" data-dates="August 2025 – current" data-detail="Taught calculus laboratory and statistics as Instructor of Record." aria-label="Graduate Teaching Associate · San Francisco State University. August 2025 – current. Taught calculus laboratory and statistics as Instructor of Record."><span class="visually-hidden">Aug 2025–2026</span></button></div>
+    </div>
+          <div class="timeline-row" role="listitem">
+      <div class="job"><strong>Graduate Research Assistant</strong><small>San Francisco State University</small></div>
+      <div class="track"><button class="interval ongoing" type="button" style="left:82.1429%;width:17.8571%" data-title="Graduate Research Assistant · San Francisco State University" data-dates="October 2025 – current" data-detail="Assisted Dr. Shandy Hauk with NSF-supported research in mathematics pedagogy." aria-label="Graduate Research Assistant · San Francisco State University. October 2025 – current. Assisted Dr. Shandy Hauk with NSF-supported research in mathematics pedagogy."><span class="visually-hidden">Oct 2025–2026</span></button></div>
+    </div>
+        </div>
+      </div>
+
+      <div class="print-experience" aria-label="Work experience details for print">
+        <p><strong>Graduate Research Assistant</strong> · San Francisco State University · Oct 2025–2026. Assisted Dr. Shandy Hauk on NSF-supported mathematical pedagogy projects.</p>
+        <p><strong>Graduate Teaching Associate</strong> · San Francisco State University · Aug 2025–2026. Instructor of Record for calculus laboratory and statistics.</p>
+        <p><strong>Afterschool STEM Instructor</strong> · CamEDU · Jan–Apr 2025. Elementary and middle school mathematics and science instruction.</p>
+        <p><strong>Manual Laborer</strong> · Russel Construction · Jul–Aug 2024. Manual labor.</p>
+        <p><strong>Robotics Instructor</strong> · EASE Education / Happy Kids Robotics · Oct–Dec 2022 and June 2024. Hands-on elementary-school robotics instruction.</p>
+        <p><strong>Delivery Driver</strong> · DoorDash · Oct 2022–Aug 2023. Delivery driver.</p>
+        <p><strong>Computer Technician</strong> · Elevate Technology · Oct 2022–Aug 2023 and Jun 2025–Dec 2026. Installation of office computers.</p>
+        <p><strong>Line Cook</strong> · Marugame Udon · Jun–Sep 2021. Line cook.</p>
+        <p><strong>IT Service Desk Intern</strong> · California Public Utilities Commission · Oct 2020–Sep 2022. Technical support, administration, and hardware inventory.</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="projects">
+      <h2 id="projects">Personal Projects</h2>
+      <article class="cv-entry">
+        <div class="cv-entry-heading"><h3>Solid Rocket Fuel Research &amp; Development</h3><span class="cv-date">2022–2026</span></div>
+        <p>Chief Technical Officer, Fog City Rocketry Club at SFSU. Researching, mixing, testing, and reformulating solid rocket fuel mixtures.</p>
+      </article>
+      <article class="cv-entry">
+        <div class="cv-entry-heading"><h3>Website Programming</h3><span class="cv-date">2021–2025</span></div>
+        <p>Websites, games, and cryptocurrency programs using HTML, CSS, JavaScript, Python, and Rust.</p>
+      </article>
+      <article class="cv-entry">
+        <div class="cv-entry-heading"><h3>Soapmaking</h3><span class="cv-date">2021</span></div>
+        <p>Developed a liquid soap formula using the hot process.</p>
+      </article>
+    </section>
+
+    <section aria-labelledby="awards">
+      <h2 id="awards">Awards</h2>
+      <p>Academic Decathlon MVP · Dean’s List · Math Matters Scholarship · V. Costantino Scholarship · Lawrence Chang Memorial Scholarship</p>
+    </section>
+  </main>
+
+  <aside id="timeline-detail" class="timeline-detail" role="tooltip" hidden>
+    <strong id="tip-title"></strong><p class="detail-dates" id="tip-dates"></p><p id="tip-detail"></p>
+  </aside>
+  <script>
+    (() => {
+      const tip = document.getElementById('timeline-detail');
+      const title = document.getElementById('tip-title');
+      const dates = document.getElementById('tip-dates');
+      const detail = document.getElementById('tip-detail');
+      const brackets = document.querySelectorAll('.interval');
+      let current = null;
+      function show(el) {
+        current = el;
+        title.textContent = el.dataset.title;
+        dates.textContent = el.dataset.dates;
+        detail.textContent = el.dataset.detail;
+        tip.hidden = false;
+        const r = el.getBoundingClientRect();
+        const w = tip.offsetWidth, h = tip.offsetHeight;
+        const x = Math.max(12, Math.min(window.innerWidth - w - 12, r.left + r.width/2 - w/2));
+        const y = r.bottom + h + 14 <= window.innerHeight ? r.bottom + 10 : Math.max(12, r.top - h - 10);
+        tip.style.left = x + 'px'; tip.style.top = y + 'px';
+      }
+      function hide() { tip.hidden = true; current = null; }
+      brackets.forEach(el => {
+        el.addEventListener('pointerenter', e => { if (e.pointerType !== 'touch') show(el); });
+        el.addEventListener('pointerleave', e => { if (e.pointerType !== 'touch') hide(); });
+        el.addEventListener('focus', () => show(el));
+        el.addEventListener('blur', hide);
+        el.addEventListener('click', e => { e.stopPropagation(); show(el); });
+      });
+      document.addEventListener('click', hide);
+      document.addEventListener('keydown', e => { if (e.key === 'Escape') hide(); });
+      document.querySelector('.timeline-scroll').addEventListener('scroll', hide);
+      window.addEventListener('resize', hide);
+    })();
+  </script>
+</body>
+</html>

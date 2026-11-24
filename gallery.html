@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gallery | Tristen Gann</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; }
+    .gallery figure { margin: 0; }
+    .gallery img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+    .gallery figcaption { margin-top: 6px; font-size: 0.9rem; color: #555; }
+  </style>
+</head>
+<body>
+  <site-nav></site-nav>
+
+  <main>
+    <h1>Gallery</h1>
+    <div class="gallery">
+      <figure>
+        <img src="assets/gallery/menmymom.jpg" alt="Me and My Mom" loading="lazy">
+        <figcaption>Me and my Mom</figcaption>
+      </figure>
+
+      <figure>
+        <img src="assets/gallery/menaxler.jpg" alt="Description of the second photo" loading="lazy">
+        <figcaption>Me and Dr. Sheldon Axler</figcaption>
+      </figure>
+
+      <figure>
+        <img src="assets/gallery/mendanvirgil.jpg" alt="Me and Dr. Voiculescu" loading="lazy">
+        <figcaption>Me and Dr. Dan-Virgil Voiculescu</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/gallery/menzhang.jpg" alt="Me and Dr. Voiculescu" loading="lazy">
+        <figcaption>Me and Dr. Ruixiang Zhang</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/gallery/menshijie.jpg" alt="Me and Dr. Voiculescu" loading="lazy">
+        <figcaption>Me and Shijie Lyu</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/gallery/menamin.jpg" alt="Me and Dr. Voiculescu" loading="lazy">
+        <figcaption>Me and Amin Abdi</figcaption>
+      </figure>
+    </div>
+    
+  </main>
+  <script src="site-nav.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+/* Minimal shared styling for all pages. */
+body {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 24px;
+  font: 16px/1.6 system-ui, sans-serif;
+  color: #222;
+}
+
+nav { display: flex; flex-wrap: wrap; gap: 20px; }
+nav a { color: inherit; }
+nav a[aria-current="page"] { font-weight: bold; }
+
+main { margin: 48px 0; }
+h1, h2 { line-height: 1.25; }
+h2 { margin-top: 32px; }
+article { margin: 32px 0; }
+a { color: #155c9b; }
+footer { border-top: 1px solid #ddd; padding-top: 12px; color: #555; }
+
+.intro { display: flex; align-items: center; gap: 28px; }
+.portrait { width: 160px; height: 160px; object-fit: cover; border-radius: 4px; }
+
+@media (max-width: 520px) {
+  .intro { flex-direction: column; align-items: flex-start; }
+}
+.about-quote {
+  margin: 2rem 0;
+  padding: 0.75rem 1.5rem;
+  max-width: 650px;
+}
+
+.about-quote p {
+  margin: 0 0 0.75rem;
+  font-family: Georgia, serif;
+  font-size: 1.15rem;
+  font-style: italic;
+  line-height: 1.7;
+}
+
+.about-quote cite {
+  display: block;
+  color: #777;
+  font-size: 0.9rem;
+  font-style: normal;
+}
